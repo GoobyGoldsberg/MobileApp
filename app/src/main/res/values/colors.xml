@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundColour">#C7CEF4</color>
+    <color name="BlueMedical">#7894CF</color>
+    <color name="TextColour">#333333</color>
+    <color name="healthyappcolour">#000080</color>
+    <color name="pinkMedical">#DCA3C2</color>
+    <color name="medicalBrown">#D1A69B</color>
+</resources>

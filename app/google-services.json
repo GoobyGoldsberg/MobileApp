@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "232429356977",
+    "firebase_url": "https://ps-groupproject-exo-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ps-groupproject-exo",
+    "storage_bucket": "ps-groupproject-exo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232429356977:android:95a03c5ecf0eb365bc1f90",
+        "android_client_info": {
+          "package_name": "com.example.psgroupprojectexo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232429356977-qvuh1098hr8qf0u3ocpn1pbvvb8vosmc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.psgroupprojectexo",
+            "certificate_hash": "c19509da281bf2f0aaa681fd72f37b2b32f18ea4"
+          }
+        },
+        {
+          "client_id": "232429356977-71eteihhphkqsj648e7i8dcevv44t1lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPKJJR4jXQupbohGxZMK1r2lzD6VhlCeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232429356977-13mbsjbe6oec0e06vnmjte657u847kb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

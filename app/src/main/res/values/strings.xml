@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">PSGroupProjectEXO</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="healthyApp">HealthyApp</string>
+    <string name="register">Register</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="click_here">Click Here</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email_address">Email Address</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">I forgot my password</string>
+    <string name="hintEmail">JohnMurphy@gmail.com</string>
+    <string name="passwordHint">Enter Password</string>
+    <string name="or_sign_in_with">Or Sign in with</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="Confirm_password">confirm password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="or_register_with">Or Register with</string>
+    <string name="title_activity_login">login</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Strings used for google-->
+    <string name="google_client_id">232429356977-71eteihhphkqsj648e7i8dcevv44t1lp.apps.googleusercontent.com</string>
+
+    <!-- String used for firebase -->
+    <string name="web_client_id" translatable="false">232429356977-71eteihhphkqsj648e7i8dcevv44t1lp.apps.googleusercontent.com</string>
+
+    <!-- Strings used for facebook -->
+    <string name="facebook_app_id">1929849844140306</string>
+    <string name="fb_login_protocol_scheme">fb1929849844140306</string>
+    <string name="facebook_client_token">aebeb28b1005878568d07c1fc00d9776</string>
+
+    <!-- String used for X -->
+    <string name="twitter_consumer_key">TWhFam9DQUFVVEhaVGticTBGYWE6MTpjaQ</string>
+    <string name="twitter_consumer_secret">Z_AWa9LL1-Y9z79RoIEoNrMpF92VmEkJN5VTqaGo691BECpzgG</string>
+    <string name="signOut">Sign Out</string>
+
+    <!-- Strings used for main_activity -->
+    <string name="personal_details">Personal Details</string>
+    <string name="subscription">Subscription</string>
+    <string name="health_assessment">Health Risk Assessment</string>
+    <string name="contact_gp_or_ins">Contact GP or Insurance Company</string>
+    <string name="review">Review the App</string>
+    <string name="contact_us">Customer Support</string>
+
+    <!-- Strings used for Personal Details activity -->
+    <string name="gp_information">GP Information</string>
+    <string name="insurance_info">Insurance Company Information</string>
+    <string name="medical_history">Medical History</string>
+    <string name="back">Back</string>
+
+
+    <!-- Strings used for Stripe -->
+    <string name="stripe_publishable_key">pk_test_51PMYd603iebvTiWJ6BKgGZnL4enCw8jSbs1Fx8fEOQDocLeRfJuHG49pTELGNFEORrqd0vypDLB6YPmdW93wfY3C00feg3YiwP</string>
+</resources>

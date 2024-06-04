@@ -1,1 +1,5 @@
-Testing pull 
+## Important information
+
+1. Gooby Goldsberg is my personal account that is linked to my pc's git, that is why all the project commits are from that account, any commits made through the github website are shown as Pawel because im logged in as that account.
+
+2. In mid-development of my project, I have experimented with git and github and accidentally, removed all my git-logs with all my commit history, I accidentally messed up my Local Repo, I wanted to put my github files in a folder so I could have 1 Folder with AndroidApp files and another folder with server-stripe for better organizing. The additional folder and other factors made my android studio program not being able to run the files.. I dont really know why it did that. I had to create a new local project (which caused the local commit log to delete), fix the project by manually copying and pasting the files from the Remote repo, and then I had to re-connect my Version control integration, for my new project... And I did it in the wrong way because my remote repo has lost it's commit logs... so.. Not ideal

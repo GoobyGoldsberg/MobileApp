@@ -2,131 +2,33 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gp_details_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".GPDetailsActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:alpha="0.8"
         android:background="@color/BlueMedical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-        <LinearLayout
-            android:id="@+id/gp_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="70dp"
-            android:background="@color/white"
-            android:fontFamily="@font/roboto"
-            android:orientation="vertical"
-            android:layout_below="@id/healthyTextLayout">
-            <!-- GP Name -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/name_of_current_gp"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/form_gp_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_gp_s_name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-            <!-- Practice Name -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/practice_name"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/form_gp_practice_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_practice_name"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <!-- Address -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/address"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/form_gp_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_address"
-                android:inputType="textPostalAddress"
-                android:minHeight="48dp" />
-
-            <!-- Phone Number -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/phone_number"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/form_gp_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_phone_number"
-                android:inputType="phone"
-                android:minHeight="48dp" />
-
-            <!-- Email Address -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/email_address"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/form_gp_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_email_address"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp" />
-        </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/healthyTextLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="28dp">
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/gp_icon_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:id="@+id/healthyAppText"
@@ -134,66 +36,177 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nova_round"
                 android:shadowColor="#4C4040"
-                android:shadowDx="8"
-                android:shadowDy="8"
-                android:shadowRadius="8"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"
                 android:text="@string/healthyApp"
                 android:textColor="@color/pinkMedical"
-                android:textSize="60sp" />
+                android:textSize="40sp" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/gp_icon_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/backLayout" >
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/healthyTextLayout"
+            app:layout_constraintBottom_toTopOf="@+id/gp_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:contentDescription="@string/options"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginStart="320dp"
-                android:backgroundTint="@color/pinkMedical"
-                android:src="@drawable/baseline_menu_24"
-                app:backgroundTint="@color/white"
-
-                />
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/backLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:alpha="0.8"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true">
-
-            <Button
-                android:id="@+id/back"
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="240dp"
-                android:layout_marginBottom="5dp"
-                android:backgroundTint="@color/pinkMedical"
+                android:src="@drawable/gp_info_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:shadowColor="#4C4040"
-                android:shadowDx="8"
-                android:shadowDy="8"
-                android:shadowRadius="30"
-                android:text="@string/back"
-                android:textColor="@color/white"
+                android:text="@string/gp_information"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
-    </RelativeLayout>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gp_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="31dp"
+            android:focusable="false"
+            app:cardCornerRadius="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gp_icon_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/enter_gp_s_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gp_name_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_of_current_gp"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/practice_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gp_practice_name_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_of_gp_practice"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_gp_address"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gp_address_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_gp_address"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_gp_phone_number"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gp_phone_number_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:minHeight="48dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/pinkMedical"
+            android:fontFamily="@font/roboto"
+            android:shadowColor="#4C4040"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="15"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/floatingActionButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="331dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:contentDescription="Return"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/backBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gp_form"
+            app:srcCompat="@drawable/baseline_menu_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

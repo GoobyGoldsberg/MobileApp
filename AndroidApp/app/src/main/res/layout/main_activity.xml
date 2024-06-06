@@ -49,6 +49,7 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/personalDetailsCardView"
             style="@style/CustomCardViewStyle"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp">

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button logoutBtn;
 
-    CardView subscriptionCard;
+    CardView personalInfoCard, subscriptionCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        personalInfoCard = findViewById(R.id.personalDetailsCardView);
+
+        personalInfoCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PersonalDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
         subscriptionCard = findViewById(R.id.subscriptionCardView);
 

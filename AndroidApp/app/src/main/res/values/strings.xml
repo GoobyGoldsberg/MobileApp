@@ -62,6 +62,7 @@
     <string name="title_activity_main2">MainActivity2</string>
 
 
+    <!-- Strings used for GP Info -->
     <string name="enter_email_address">Enter Email Address</string>
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="phone_number">Phone Number</string>
@@ -75,6 +76,10 @@
     <string name="enter_gp_address">GP\'s Address</string>
     <string name="enter_gp_phone_number">GP\'s Phone Number</string>
     <string name="name_of_gp_practice">Enter GP\'s Practice</string>
+
+
+
+    <!-- Strings used for Insurance Details -->
     <string name="enter_insurance_company_name">Enter insurance company name</string>
     <string name="name_of_insurance_company">Name of Insurance Company</string>
     <string name="enter_policy_number">Enter Policy Number</string>
@@ -102,4 +107,17 @@
     <string name="enter_claims_contact">Enter Claims Contact</string>
     <string name="claims_contact">Claims Contact Number</string>
     <string name="insurance_information">Insurance Information</string>
+
+
+    <!-- Strings used for medical history -->
+    <string name="past_medical_history">Past Medical History</string>
+    <string name="smoking">Smoking</string>
+    <string name="obesity">Obesity</string>
+    <string name="family_history_of_cancer">Family History of Cancer</string>
+    <string name="high_cholesterol">High Cholesterol</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="high_blood_pressure">High Blood Pressure</string>
+    <string name="physical_inactivity">Physical Inactivity</string>
+    <string name="poor_diet">Poor Diet</string>
+    
 </resources>

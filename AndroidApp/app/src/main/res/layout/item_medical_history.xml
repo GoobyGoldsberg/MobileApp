@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/medical_history_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:columnCount="2"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/smoking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smoking" />
+
+        <CheckBox
+            android:id="@+id/obesity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/obesity" />
+
+        <CheckBox
+            android:id="@+id/family_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/family_history_of_cancer" />
+
+        <CheckBox
+            android:id="@+id/high_cholesterol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/high_cholesterol" />
+
+        <CheckBox
+            android:id="@+id/diabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diabetes" />
+
+        <CheckBox
+            android:id="@+id/high_blood_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/high_blood_pressure" />
+
+        <CheckBox
+            android:id="@+id/physical_inactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/physical_inactivity" />
+
+        <CheckBox
+            android:id="@+id/poor_diet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/poor_diet" />
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

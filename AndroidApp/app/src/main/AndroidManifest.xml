@@ -24,6 +24,9 @@
         android:theme="@style/Theme.PSGroupProjectEXO"
         tools:targetApi="31">
         <activity
+            android:name=".MedicalHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".InsuranceDetailsActivity"
             android:exported="false" />
         <activity

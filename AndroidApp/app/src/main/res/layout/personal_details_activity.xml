@@ -49,6 +49,7 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/gpInformationCard"
             style="@style/CustomCardViewStyle"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp">
@@ -113,6 +114,7 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/medicalHistoryCard"
             style="@style/CustomCardViewStyle"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
@@ -185,7 +187,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
-
         android:backgroundTint="@color/pinkMedical"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="40dp"

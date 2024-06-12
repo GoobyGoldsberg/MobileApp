@@ -115,7 +115,9 @@
         <androidx.cardview.widget.CardView
             style="@style/CustomCardViewStyle"
             app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            android:alpha="0.3"
+            android:focusable="false">
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button logoutBtn;
 
-    CardView personalInfoCard, subscriptionCard;
+    CardView personalInfoCard, subscriptionCard, contactHealthcare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +59,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PaymentActivity.class);
                 startActivity(intent);
-
             }
         });
 
 
+        contactHealthcare = findViewById(R.id.healthcareContactCard);
+
+        contactHealthcare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContactThirdParty.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

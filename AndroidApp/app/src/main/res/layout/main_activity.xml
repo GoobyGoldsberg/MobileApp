@@ -141,6 +141,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/healthcareContactCard"
             style="@style/CustomCardViewStyle"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp">

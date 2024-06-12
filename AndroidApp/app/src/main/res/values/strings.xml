@@ -78,7 +78,6 @@
     <string name="name_of_gp_practice">Enter GP\'s Practice</string>
 
 
-
     <!-- Strings used for Insurance Details -->
     <string name="enter_insurance_company_name">Enter insurance company name</string>
     <string name="name_of_insurance_company">Name of Insurance Company</string>
@@ -119,5 +118,10 @@
     <string name="high_blood_pressure">High Blood Pressure</string>
     <string name="physical_inactivity">Physical Inactivity</string>
     <string name="poor_diet">Poor Diet</string>
-    
+    <string name="contact_your_healthcarers">Contact Your Healthcarers</string>
+    <string name="gp_phone_number">GP Phone Number</string>
+    <string name="call_gp">Call GP</string>
+    <string name="insurance_phone_number">Insurance Phone Number</string>
+    <string name="call_insurance">Call Insurance</string>
+
 </resources>

@@ -123,5 +123,9 @@
     <string name="call_gp">Call GP</string>
     <string name="insurance_phone_number">Insurance Phone Number</string>
     <string name="call_insurance">Call Insurance</string>
+    <string name="review_the_app">Review The App</string>
+    <string name="rate_us">Rate us!</string>
+    <string name="submit">Submit</string>
+    <string name="provide_additional_feedback_here">Provide additional feedback here</string>
 
 </resources>

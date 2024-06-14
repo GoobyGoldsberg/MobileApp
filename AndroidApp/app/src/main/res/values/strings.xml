@@ -127,5 +127,9 @@
     <string name="rate_us">Rate us!</string>
     <string name="submit">Submit</string>
     <string name="provide_additional_feedback_here">Provide additional feedback here</string>
+    <string name="call_us">Call us</string>
+    <string name="email_support_example_com">Email: support@example.com</string>
+    <string name="please_enter_additional_information">Please enter additional information</string>
+    <string name="how_can_we_help">How can we help?</string>
 
 </resources>

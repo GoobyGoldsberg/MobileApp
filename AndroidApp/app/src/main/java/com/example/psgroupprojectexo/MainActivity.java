@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
+import com.stripe.model.Customer;
 
 import java.util.concurrent.Flow;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button logoutBtn;
 
-    CardView personalInfoCard, subscriptionCard, contactHealthcareCard, reviewTheAppCard;
+    CardView personalInfoCard, subscriptionCard, contactHealthcareCard, reviewTheAppCard, customerSupportCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ReviewApp.class);
+                startActivity(intent);
+            }
+        });
+
+
+        customerSupportCard = findViewById(R.id.customerSupportCardView);
+
+        customerSupportCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CustomerSupport.class);
                 startActivity(intent);
             }
         });

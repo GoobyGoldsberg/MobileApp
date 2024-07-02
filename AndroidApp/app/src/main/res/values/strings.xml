@@ -131,5 +131,7 @@
     <string name="email_support_example_com">Email: support@example.com</string>
     <string name="please_enter_additional_information">Please enter additional information</string>
     <string name="how_can_we_help">How can we help?</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
 
 </resources>

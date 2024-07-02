@@ -33,6 +33,9 @@
             android:name=".ContactThirdParty"
             android:exported="false" />
         <activity
+            android:name=".GPDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MedicalHistoryActivity"
             android:exported="false" />
         <activity

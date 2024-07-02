@@ -42,7 +42,6 @@
                 android:text="@string/healthyApp"
                 android:textColor="@color/pinkMedical"
                 android:textSize="40sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -53,7 +52,7 @@
             android:orientation="vertical"
             android:padding="16dp"
             app:layout_constraintTop_toBottomOf="@id/healthyTextLayout"
-            app:layout_constraintBottom_toTopOf="@+id/insurance_form_recyclerview"
+            app:layout_constraintBottom_toTopOf="@+id/formScrollView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -69,21 +68,26 @@
                 android:text="@string/insurance_information"
                 android:textSize="25sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/insurance_form_recyclerview"
+        <ScrollView
+            android:id="@+id/formScrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-
             android:layout_marginEnd="8dp"
             android:background="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+            app:layout_constraintBottom_toTopOf="@+id/floatingButtonLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gp_icon_layout" />
+            app:layout_constraintTop_toBottomOf="@id/gp_icon_layout">
+
+            <LinearLayout
+                android:id="@+id/formContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
 
         <Button
             android:id="@+id/backBtn"
@@ -103,24 +107,65 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/floatingActionButton" />
+            app:layout_constraintTop_toBottomOf="@id/floatingButtonLayout" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/floatingButtonLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="331dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:contentDescription="Return"
-            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp"
+            android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toTopOf="@+id/backBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/insurance_form_recyclerview"
-            app:srcCompat="@drawable/baseline_menu_24" />
+            app:layout_constraintTop_toBottomOf="@id/formScrollView">
 
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/pinkMedical"
+                android:fontFamily="@font/roboto"
+                android:shadowColor="#4C4040"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="15"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:clickable="false" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/pinkMedical"
+                android:fontFamily="@font/roboto"
+                android:shadowColor="#4C4040"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="15"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:visibility="invisible"
+                android:clickable="false" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="Return"
+                android:focusable="true"
+                android:layout_marginStart="30dp"
+                app:srcCompat="@drawable/baseline_menu_24" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class InsuranceDetailsAdapter extends RecyclerView.Adapter<InsuranceDetailsAdapter.InsuranceViewHolder> {
+public class InsuranceDetailsAdapter extends RecyclerView.Adapter<InsuranceDetailsAdapter.ViewHolder> {
 
-    private final List<InsuranceDetail> insuranceDetails;
+    private List<InsuranceDetail> insuranceDetails;
 
     public InsuranceDetailsAdapter(List<InsuranceDetail> insuranceDetails) {
         this.insuranceDetails = insuranceDetails;
@@ -21,17 +21,31 @@ public class InsuranceDetailsAdapter extends RecyclerView.Adapter<InsuranceDetai
 
     @NonNull
     @Override
-    public InsuranceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.insurance_detail_item, parent, false);
-        return new InsuranceViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull InsuranceViewHolder holder, int position) {
-        InsuranceDetail detail = insuranceDetails.get(position);
-        holder.label.setText(detail.getLabel());
-        holder.input.setHint(detail.getHint());
-        holder.input.setInputType(detail.getInputType());
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        InsuranceDetail insuranceDetail = insuranceDetails.get(position);
+        holder.label.setText(insuranceDetail.getLabel());
+        holder.input.setHint(insuranceDetail.getHint());
+        holder.input.setInputType(insuranceDetail.getInputType());
+
+        if (!holder.input.isEnabled()) {
+            holder.input.setText(insuranceDetail.getValue());
+        } else {
+            holder.input.setText("");  // Clear the text if it's editable
+        }
+
+        // Update the value when the text changes
+        holder.input.addTextChangedListener(new SimpleTextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                insuranceDetail.setValue(s.toString());
+            }
+        });
     }
 
     @Override
@@ -39,11 +53,11 @@ public class InsuranceDetailsAdapter extends RecyclerView.Adapter<InsuranceDetai
         return insuranceDetails.size();
     }
 
-    public static class InsuranceViewHolder extends RecyclerView.ViewHolder {
-        public TextView label;
-        public EditText input;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView label;
+        EditText input;
 
-        public InsuranceViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             label = itemView.findViewById(R.id.insurance_detail_label);
             input = itemView.findViewById(R.id.insurance_detail_input);

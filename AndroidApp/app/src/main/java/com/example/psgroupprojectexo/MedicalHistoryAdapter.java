@@ -13,9 +13,14 @@ import java.util.List;
 public class MedicalHistoryAdapter extends RecyclerView.Adapter<MedicalHistoryAdapter.MedicalHistoryViewHolder> {
 
     private final List<MedicalHistoryItem> medicalHistoryItems;
+    private boolean isClickable = true;
 
     public MedicalHistoryAdapter(List<MedicalHistoryItem> medicalHistoryItems) {
         this.medicalHistoryItems = medicalHistoryItems;
+    }
+
+    public void setClickable(boolean clickable) {
+        isClickable = clickable;
     }
 
     @NonNull
@@ -29,12 +34,16 @@ public class MedicalHistoryAdapter extends RecyclerView.Adapter<MedicalHistoryAd
     @Override
     public void onBindViewHolder(@NonNull MedicalHistoryViewHolder holder, int position) {
         MedicalHistoryItem item = medicalHistoryItems.get(position);
-        holder.bind(item);
+        holder.bind(item, isClickable);
     }
 
     @Override
     public int getItemCount() {
         return medicalHistoryItems.size();
+    }
+
+    public List<MedicalHistoryItem> getMedicalHistoryItems() {
+        return medicalHistoryItems;
     }
 
     static class MedicalHistoryViewHolder extends RecyclerView.ViewHolder {
@@ -59,7 +68,7 @@ public class MedicalHistoryAdapter extends RecyclerView.Adapter<MedicalHistoryAd
             poorDiet = itemView.findViewById(R.id.poor_diet);
         }
 
-        void bind(MedicalHistoryItem item) {
+        void bind(MedicalHistoryItem item, boolean isClickable) {
             smoking.setChecked(item.isSmoking());
             obesity.setChecked(item.isObesity());
             familyHistory.setChecked(item.isFamilyHistory());
@@ -68,8 +77,24 @@ public class MedicalHistoryAdapter extends RecyclerView.Adapter<MedicalHistoryAd
             highBloodPressure.setChecked(item.isHighBloodPressure());
             physicalInactivity.setChecked(item.isPhysicalInactivity());
             poorDiet.setChecked(item.isPoorDiet());
+
+            smoking.setEnabled(isClickable);
+            obesity.setEnabled(isClickable);
+            familyHistory.setEnabled(isClickable);
+            highCholesterol.setEnabled(isClickable);
+            diabetes.setEnabled(isClickable);
+            highBloodPressure.setEnabled(isClickable);
+            physicalInactivity.setEnabled(isClickable);
+            poorDiet.setEnabled(isClickable);
+
+            smoking.setOnCheckedChangeListener((buttonView, isChecked) -> item.setSmoking(isChecked));
+            obesity.setOnCheckedChangeListener((buttonView, isChecked) -> item.setObesity(isChecked));
+            familyHistory.setOnCheckedChangeListener((buttonView, isChecked) -> item.setFamilyHistory(isChecked));
+            highCholesterol.setOnCheckedChangeListener((buttonView, isChecked) -> item.setHighCholesterol(isChecked));
+            diabetes.setOnCheckedChangeListener((buttonView, isChecked) -> item.setDiabetes(isChecked));
+            highBloodPressure.setOnCheckedChangeListener((buttonView, isChecked) -> item.setHighBloodPressure(isChecked));
+            physicalInactivity.setOnCheckedChangeListener((buttonView, isChecked) -> item.setPhysicalInactivity(isChecked));
+            poorDiet.setOnCheckedChangeListener((buttonView, isChecked) -> item.setPoorDiet(isChecked));
         }
     }
 }
-
-

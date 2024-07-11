@@ -133,5 +133,7 @@
     <string name="how_can_we_help">How can we help?</string>
     <string name="delete">Delete</string>
     <string name="save">Save</string>
+    <string name="paid">Paid</string>
+    <string name="please_wait_while_the_bill_is_loading">Please wait while the bill is loading</string>
 
 </resources>

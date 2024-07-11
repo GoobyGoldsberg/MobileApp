@@ -180,21 +180,5 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="@color/pinkMedical"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/baseline_add_24"
-        app:backgroundTint="@color/white"
-
-        >
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </RelativeLayout>

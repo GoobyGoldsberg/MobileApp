@@ -3,6 +3,7 @@ package com.example.psgroupprojectexo;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,11 +34,8 @@ public class PaymentActivity extends AppCompatActivity {
 
         paymentSheet = new PaymentSheet(this, this::onPaymentSheetResult);
 
-        payBtn = findViewById(R.id.payButton);
-
         String url = "https://us-central1-ps-groupproject-exo.cloudfunctions.net/helloWorld";
 
-        // Fetch payment details from the server
         Fuel.INSTANCE.post(url, null).responseString(new Handler<String>() {
             @Override
             public void success(String s) {
@@ -50,19 +48,12 @@ public class PaymentActivity extends AppCompatActivity {
                     paymentClientSecret = result.getString("paymentIntent");
                     PaymentConfiguration.init(getApplicationContext(), result.getString("publishableKey"));
 
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            presentPaymentSheet();
-                        }
-                    });
-
-                    // Log the received values
                     Log.d(TAG, "Customer ID: " + customerConfig.getId());
                     Log.d(TAG, "Ephemeral Key: " + customerConfig.getEphemeralKeySecret());
                     Log.d(TAG, "Payment Intent: " + paymentClientSecret);
                     Log.d(TAG, "Publishable Key: " + result.getString("publishableKey"));
 
+                    runOnUiThread(() -> presentPaymentSheet());
 
                 } catch (JSONException e) {
                     Toast.makeText(PaymentActivity.this, "Error in JSON parsing", Toast.LENGTH_SHORT).show();
@@ -77,12 +68,6 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
-        payBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presentPaymentSheet();
-            }
-        });
     }
 
     private void presentPaymentSheet() {
@@ -107,6 +92,12 @@ public class PaymentActivity extends AppCompatActivity {
         } else if (paymentSheetResult instanceof PaymentSheetResult.Completed) {
             Toast.makeText(PaymentActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "Payment Successful");
+
+            Intent intent = new Intent(PaymentActivity.this, MainActivity.class);
+            intent.putExtra("paymentSuccess", true);
+            Log.d(TAG, "Extra boolean has been put");
+            startActivity(intent);
+            finish();
         }
     }
 }

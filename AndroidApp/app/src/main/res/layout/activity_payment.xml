@@ -1,13 +1,103 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/insurance_details_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    tools:context=".MedicalHistoryActivity">
 
-  <Button
-      android:id="@+id/payButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Pay Now" />
-</LinearLayout>
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:alpha="0.8"
+      android:background="@color/BlueMedical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/healthyTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/subscription_icon_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+          android:id="@+id/healthyAppText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/nova_round"
+          android:shadowColor="#4C4040"
+          android:shadowDx="8"
+          android:shadowDy="8"
+          android:shadowRadius="8"
+          android:text="@string/healthyApp"
+          android:textColor="@color/pinkMedical"
+          android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subscription_icon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/healthyTextLayout">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/subscription_icon" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto"
+          android:text="@string/subscription"
+          android:textSize="25sp"
+          android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subscription_icon_layout"
+        android:layout_marginTop="200dp"
+        >
+
+        <TextView
+            android:id="@+id/Please_wait_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nova_round"
+            android:shadowColor="#4C4040"
+            android:shadowRadius="8"
+            android:text="@string/please_wait_while_the_bill_is_loading"
+            android:textColor="@color/pinkMedical"
+            android:textSize="40sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

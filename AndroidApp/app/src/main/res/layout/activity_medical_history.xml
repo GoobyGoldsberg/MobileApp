@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="28dp"
+            android:layout_alignParentTop="true"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/gp_icon_layout"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +37,12 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nova_round"
                 android:shadowColor="#4C4040"
-                android:shadowDx="4"
-                android:shadowDy="4"
-                android:shadowRadius="4"
+                android:shadowDx="8"
+                android:shadowDy="8"
+                android:shadowRadius="8"
                 android:text="@string/healthyApp"
                 android:textColor="@color/pinkMedical"
-                android:textSize="40sp" />
+                android:textSize="60sp" />
 
         </LinearLayout>
 

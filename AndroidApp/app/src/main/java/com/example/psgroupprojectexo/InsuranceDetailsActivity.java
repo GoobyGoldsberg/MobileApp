@@ -92,7 +92,6 @@ public class InsuranceDetailsActivity extends AppCompatActivity {
     }
 
     private void saveDetails() {
-        // Logic to save details to the database
         Map<String, String> detailsMap = new HashMap<>();
         for (int i = 0; i < formContainer.getChildCount(); i++) {
             View itemView = formContainer.getChildAt(i);
@@ -113,18 +112,15 @@ public class InsuranceDetailsActivity extends AppCompatActivity {
             input.setEnabled(false);
         }
 
-        // Hide save and delete buttons
         saveButton.setVisibility(View.INVISIBLE);
         deleteButton.setVisibility(View.INVISIBLE);
     }
 
     private void deleteDetails() {
-        // Logic to delete details from the database
         databaseReference.removeValue()
                 .addOnSuccessListener(aVoid -> Toast.makeText(InsuranceDetailsActivity.this, "Details deleted successfully", Toast.LENGTH_SHORT).show())
                 .addOnFailureListener(e -> Toast.makeText(InsuranceDetailsActivity.this, "Failed to delete details: " + e.getMessage(), Toast.LENGTH_SHORT).show());
 
-        // Clear the input fields
         for (InsuranceDetail detail : insuranceDetails) {
             detail.setValue("");
         }
@@ -133,10 +129,9 @@ public class InsuranceDetailsActivity extends AppCompatActivity {
             View itemView = formContainer.getChildAt(i);
             EditText input = itemView.findViewById(R.id.insurance_detail_input);
             input.setText("");
-            input.setEnabled(true); // Make fields editable again
+            input.setEnabled(true);
         }
 
-        // Hide save and delete buttons
         saveButton.setVisibility(View.INVISIBLE);
         deleteButton.setVisibility(View.INVISIBLE);
     }

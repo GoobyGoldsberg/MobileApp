@@ -66,7 +66,6 @@ public class GPDetailsActivity extends AppCompatActivity {
             }
         });
 
-        // Set button click listeners
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
